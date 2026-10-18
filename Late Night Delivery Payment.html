@@ -1,0 +1,86 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Late Night Delivery Payment</title>
+<style>body { background: #fff; color: #000; padding: 0 16px; max-width: 600px; margin: 0 auto; }</style>
+
+<!-- 1. Header -->
+<h1>PAYMENT</h1>
+<p>Late Night Delivery. Choose how you want to pay.</p>
+
+<hr>
+
+<!-- 2. Your Details -->
+<form id="payForm">
+<div>
+<h2>Your Details</h2>
+<p>
+<label for="name">Name:</label><br>
+<input type="text" id="name" required>
+</p>
+<p>
+<label for="phone">Phone number:</label><br>
+<input type="tel" id="phone" required>
+</p>
+<p>
+<label for="address">Delivery address:</label><br>
+<textarea id="address" rows="3" cols="30" required></textarea>
+</p>
+<p>
+<label for="amount">Order total (taka):</label><br>
+<input type="number" id="amount" min="1" required>
+</p>
+</div>
+
+<hr>
+
+<!-- 3. Payment Method -->
+<div>
+<h2>Payment Method</h2>
+<p><input type="radio" name="pay" id="cod" value="Cash on Delivery" checked> <label for="cod">Cash on Delivery</label></p>
+<p><input type="radio" name="pay" id="bkash" value="bKash"> <label for="bkash">bKash</label></p>
+<p><input type="radio" name="pay" id="nagad" value="Nagad"> <label for="nagad">Nagad</label></p>
+<p><input type="radio" name="pay" id="card" value="Card"> <label for="card">Card</label></p>
+</div>
+
+<hr>
+
+<!-- 4. How To Pay -->
+<div>
+<h2>How To Pay</h2>
+<h3>Cash on Delivery</h3>
+<p>Pay cash to the rider when your order arrives.</p>
+
+<h3>bKash and Nagad</h3>
+<p>Send money to 01XXXXXXXXX, then write the transaction ID here.</p>
+<p>
+<label for="trx">Transaction ID:</label><br>
+<input type="text" id="trx">
+</p>
+
+<h3>Card</h3>
+<p>Pay with a card machine when the rider arrives.</p>
+</div>
+
+<hr>
+
+<!-- 5. Confirm -->
+<div>
+<p><button type="submit">Confirm Order</button></p>
+<p id="message"></p>
+</div>
+</form>
+
+<script>
+document.getElementById("payForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  var pay = document.querySelector("input[name=pay]:checked").value;
+  var trx = document.getElementById("trx").value;
+  var message = document.getElementById("message");
+  if ((pay === "bKash" || pay === "Nagad") && trx === "") {
+    message.textContent = "Please write the " + pay + " transaction ID.";
+    return;
+  }
+  message.textContent = "Thank you " + document.getElementById("name").value + ", your order of " + document.getElementById("amount").value + " taka is received. Payment: " + pay + ".";
+});
+</script>
+
+</body></html>
