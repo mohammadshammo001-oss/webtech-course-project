@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriental Street - Customer Delivery Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>🍔 Oriental Street</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="registration-section">
+        <div class="registration-container">
+
+            <h2>Customer Delivery Profile</h2>
+            <p>Enter your delivery address.</p>
+
+            <form id="profileForm">
+
+                <label>House / Flat Number:</label>
+                <input type="text" id="houseNumber"
+                    placeholder="Example: House 12, Flat 3B">
+
+                <label>Road / Street Number:</label>
+                <input type="text" id="roadNumber"
+                    placeholder="Example: Road 5">
+
+                <label>Block / Sector:</label>
+                <input type="text" id="blockNumber"
+                    placeholder="Example: Block C">
+
+                <label>Nearby Landmark (Optional):</label>
+                <input type="text" id="landmark"
+                    placeholder="Example: Near a school">
+
+                <label>Delivery Area:</label>
+                <select id="deliveryArea">
+                    <option value="">Select your area</option>
+                    <option value="Dhanmondi">Dhanmondi</option>
+                    <option value="Mohammadpur">Mohammadpur</option>
+                    <option value="Mirpur">Mirpur</option>
+                    <option value="Uttara">Uttara</option>
+                    <option value="Gulshan">Gulshan</option>
+                    <option value="Banani">Banani</option>
+                    <option value="Bashundhara R/A">Bashundhara R/A</option>
+                    <option value="Badda">Badda</option>
+                    <option value="Rampura">Rampura</option>
+                    <option value="Motijheel">Motijheel</option>
+                    <option value="Farmgate">Farmgate</option>
+                    <option value="Mohakhali">Mohakhali</option>
+                    <option value="Jatrabari">Jatrabari</option>
+                    <option value="Old Dhaka">Old Dhaka</option>
+                </select>
+
+                <p id="profileMessage"></p>
+
+                <button type="submit">Save Delivery Profile</button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Oriental Street. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

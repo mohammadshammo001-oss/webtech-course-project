@@ -1,0 +1,249 @@
+
+/* Basic Page Design */
+body {
+    font-family: Arial;
+    background-color: #fffaf5;
+    margin: 0;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: orangered;
+}
+
+nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+
+nav a:hover {
+    color: orangered;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffe5d5;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: orangered;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero a {
+    display: inline-block;
+    background-color: orangered;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* Offers Section */
+.offers {
+    text-align: center;
+    padding: 30px;
+}
+
+.offer-card {
+    display: inline-block;
+    background-color: orangered;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+}
+
+/* Categories Section */
+.categories {
+    text-align: center;
+    padding: 30px;
+}
+
+.category-card {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+}
+
+.category-card span {
+    font-size: 40px;
+}
+
+/* Popular Food Section */
+.popular {
+    text-align: center;
+    padding: 30px;
+}
+
+.food-card {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+}
+
+.food-card span {
+    font-size: 50px;
+}
+
+.food-card h3 {
+    color: orangered;
+}
+
+.food-card button {
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Login Page */
+.login-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.login-container {
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+}
+
+.login-container h2 {
+    color: orangered;
+}
+
+.role-selection {
+    margin: 25px 0;
+}
+
+.role-selection button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.login-container input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.login-container form button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: orangered;
+}
+
+/* Registration Pages */
+.registration-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.registration-container {
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+}
+
+.registration-container h2 {
+    color: orangered;
+    margin-bottom: 10px;
+}
+
+.registration-container label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.registration-container input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.registration-container button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Delivery Profile Page */
+.registration-container textarea {
+    width: 95%;
+    height: 80px;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: Arial;
+}
+
+.registration-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
