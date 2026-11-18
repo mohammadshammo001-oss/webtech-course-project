@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine | OS Delivery</title>
+
+    <link rel="stylesheet" href="rid_style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            OS DELIVERY
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+            <li><a href="personal_need.html">Personal Needs</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Medicine Catalog</h1>
+
+        <p>
+            Essential medicines and healthcare products
+            delivered to your doorstep.
+        </p>
+
+        <input
+    type="text"
+    id="medicineSearch"
+    placeholder="Search Medicines..."
+    onkeyup="searchMedicine()">
+
+        <br><br>
+
+        <select id="medicineFilter">
+
+            <option>All Categories</option>
+            <option>Pain Relief</option>
+            <option>Women's Care</option>
+            <option>Oral Saline</option>
+
+        </select>
+
+    </section>
+
+
+    <section class="categories-section">
+
+        <h2>Pain Relief</h2>
+
+        <div class="category-grid">
+
+            <div class="card medicine-card">
+
+                <img src="image/Napa.webp"
+                     alt="Napa">
+
+                <h3>Napa 500mg</h3>
+
+                <p>
+                    Effective relief for fever and pain.
+                </p>
+
+                <p>
+                    Price: ৳20
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <h2 style="margin-top:40px;">
+            Women's Care
+        </h2>
+
+        <div class="category-grid">
+
+            <div class="card medicine-card">
+
+                <img src="image/femi.webp"
+                     alt="Femicon">
+
+                <h3>Femicon</h3>
+
+                <p>
+                    Women's healthcare product.
+                </p>
+
+                <p>
+                    Price: ৳45
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <h2 style="margin-top:40px;">
+            Oral Saline
+        </h2>
+
+        <div class="category-grid">
+
+            <div class="card medicine-card">
+
+                <img src="image/smc.webp"
+                     alt="SMC Saline">
+
+                <h3>SMC Oral Saline</h3>
+
+                <p>
+                    Helps prevent dehydration.
+                </p>
+
+                <p>
+                    Price: ৳10
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 OS Delivery Service
+        </p>
+
+    </footer>
+
+    <script src="rid_script.js"></script>
+
+</body>
+
+</html>
