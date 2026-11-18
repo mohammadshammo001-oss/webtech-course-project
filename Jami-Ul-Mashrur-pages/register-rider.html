@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodieGo - Rider Registration</title>
+    <title>Oriental Street - Rider Registration</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <h1>🍔 FoodieGo</h1>
+        <h1>🍔 Oriental Street</h1>
 
         <nav>
             <a href="index.html">Home</a>
@@ -28,33 +28,33 @@
 
             <h2>Rider Registration</h2>
 
-            <p>Enter your information to register as a FoodieGo rider.</p>
+            <p>Enter your information to register as an Oriental Street rider.</p>
 
             <form id="riderForm">
 
-                <label>Full Name:</label>
-                <input type="text" id="riderName" placeholder="Enter your full name">
+                <label for="riderName">Full Name:</label>
+                <input type="text" id="riderName" placeholder="Enter your full name" required>
 
-                <label>Email:</label>
-                <input type="email" id="riderEmail" placeholder="Enter your email address">
+                <label for="riderEmail">Email:</label>
+                <input type="email" id="riderEmail" placeholder="Enter your email address" required>
 
-                <label>Password:</label>
-                <input type="password" id="riderPassword" placeholder="Create a password">
+                <label for="riderPassword">Password:</label>
+                <input type="password" id="riderPassword" placeholder="Create a password" required>
 
-                <label>NID Number:</label>
-                <input type="text" id="riderNID" placeholder="Enter your NID number">
+                <label for="riderNID">NID Number:</label>
+                <input type="text" id="riderNID" placeholder="Enter your NID number" required>
 
-                <label>Vehicle Type:</label>
+                <label for="vehicleType">Vehicle Type:</label>
 
-                <select id="vehicleType">
+                <select id="vehicleType" required>
                     <option value="">Select Vehicle</option>
                     <option value="Bicycle">Bicycle</option>
                     <option value="Motorcycle">Motorcycle</option>
                     <option value="Car">Car</option>
                 </select>
 
-                <label>Driving License Number:</label>
-                <input type="text" id="licenseNumber" placeholder="Enter your license number">
+                <label for="licenseNumber">Driving License Number:</label>
+                <input type="text" id="licenseNumber" placeholder="Enter your license number" required>
 
                 <p id="riderMessage"></p>
 
@@ -67,7 +67,7 @@
     </section>
 
     <footer>
-        <p>© 2026 FoodieGo. All Rights Reserved.</p>
+        <p>© 2026 Oriental Street. All Rights Reserved.</p>
     </footer>
 
 </body>
