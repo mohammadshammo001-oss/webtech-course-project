@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | OS DELIVERY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cart-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .item-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .item-row:last-child {
+      border-bottom: none;
+    }
+
+    .item-thumb {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .item-addons {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .item-qty {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .item-qty button {
+      width: 28px;
+      height: 28px;
+      border: 1px solid #ccc;
+      background: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .item-qty span {
+      font-weight: bold;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .item-total {
+      font-weight: bold;
+      font-size: 15px;
+      color: #333;
+      flex-shrink: 0;
+      min-width: 70px;
+      text-align: right;
+    }
+
+    .btn-remove {
+      background: none;
+      border: none;
+      color: #dc3545;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .summary-row:last-child { border-bottom: none; }
+    .summary-row.total {
+      font-size: 18px;
+      font-weight: bold;
+      border-top: 2px solid #333;
+      margin-top: 5px;
+      padding-top: 10px;
+    }
+
+    .summary-row .discount-val { color: #28a745; font-weight: bold; }
+
+    .promo-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .promo-row input {
+      flex: 1;
+      text-transform: uppercase;
+    }
+
+    .promo-applied {
+      background: #e9f7ef;
+      border: 1px solid #28a745;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .empty-cart .icon { font-size: 48px; margin-bottom: 10px; }
+
+    @media (max-width: 768px) {
+      .cart-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"> OS DELIVERY</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discounts.html">Deals</a></li>
+      <li><a href="cart.html" class="active">Cart</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+    <a href="cart.html" class="cart-btn">
+       Cart <span class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <div class="container" style="margin-top: 20px;">
+    <h1 class="page-title"> My Cart</h1>
+    <p class="page-subtitle">Review your items and apply a promo code before checkout.</p>
+
+    <!-- Empty state -->
+    <div class="empty-cart" id="empty-view" style="display: none;">
+      <div class="icon"></div>
+      <h3 style="margin-bottom: 8px;">Your cart is empty</h3>
+      <p style="color: #777; margin-bottom: 15px;">Add some late-night food items to get started!</p>
+      <a href="discounts.html" class="btn btn-primary">Browse Deals</a>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="cart-layout" id="cart-view">
+
+      <!-- Left: Items -->
+      <div class="card">
+        <!-- Items list -->
+        <div id="cart-items">
+          <!-- filled by JS -->
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="form-group" style="margin-top: 15px;">
+          <label for="cart-note">Special Delivery Note:</label>
+          <input type="text" id="cart-note" placeholder=" ">
+        </div>
+
+        <!-- Bottom actions -->
+        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+          <a href="discounts.html" class="btn btn-outline btn-sm">Add More Items</a>
+          <button class="btn btn-sm btn-danger" onclick="clearCart(); renderCart();">Clear Cart</button>
+        </div>
+      </div>
+
+      <!-- Right: Order Summary -->
+      <div>
+        <div class="card" style="margin-bottom: 15px;">
+          <h3 style="font-size: 16px; margin-bottom: 15px;">Promo Code</h3>
+
+          <!-- Promo input -->
+          <div class="promo-row">
+            <input type="text" id="promo-input" placeholder="Enter code">
+            <button class="btn btn-secondary btn-sm" onclick="doApplyPromo()">Apply</button>
+          </div>
+
+          <!-- Applied badge -->
+          <div id="promo-badge" style="display:none;" class="promo-applied">
+            <span id="promo-badge-text"></span>
+            <button onclick="removePromo(); renderCart();" style="background:none; border:none; color:#dc3545; cursor:pointer; font-size:16px;">×</button>
+          </div>
+
+          <p style="font-size: 12px; color: #888;">
+            Try: <b>NIGHT20</b> (20% off), <b>FLAT50</b> (TK50 off), <b>FREESHIP</b> (Free delivery)
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: 16px; margin-bottom: 15px;">Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="s-subtotal">TK0</span>
+          </div>
+          <div class="summary-row" id="s-discount-row" style="display:none;">
+            <span>Discount</span>
+            <span class="discount-val" id="s-discount">-TK0</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="s-delivery">TK60</span>
+          </div>
+          <div class="summary-row">
+            <span>Packaging</span>
+            <span id="s-packaging">TK20</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax (5%)</span>
+            <span id="s-tax">TK0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="s-total" style="color:#e65c00;">TK0</span>
+          </div>
+
+          <a href="checkout.html" class="btn btn-primary btn-block" style="display:block; margin-top:15px; text-align:center;">
+            Proceed to Checkout 
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function renderCart() {
+      const cart = getCart();
+      const totals = calcTotals();
+
+      const emptyView = document.getElementById("empty-view");
+      const cartView = document.getElementById("cart-view");
+
+      if (cart.length === 0) {
+        emptyView.style.display = "block";
+        cartView.style.display = "none";
+        return;
+      }
+      emptyView.style.display = "none";
+      cartView.style.display = "grid";
+
+      // Render items
+      const itemsEl = document.getElementById("cart-items");
+      itemsEl.innerHTML = "";
+      cart.forEach(item => {
+        const addonCost = item.addOns.reduce((s, a) => s + a.price, 0);
+        const unitTotal = item.price + addonCost;
+        const lineTotal = unitTotal * item.qty;
+
+        const row = document.createElement("div");
+        row.className = "item-row";
+        row.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="item-thumb">
+          <div style="flex:1; min-width:0;">
+            <div class="item-name">${item.name}</div>
+            <div class="item-addons">${item.addOns.map(a => a.name).join(", ") || "No add-ons"}</div>
+            <div style="font-size:13px; color:#888;">TK${unitTotal} each</div>
+          </div>
+          <div class="item-qty">
+            <button onclick="updateQty('${item.cartId}', ${item.qty - 1}); renderCart();">−</button>
+            <span>${item.qty}</span>
+            <button onclick="updateQty('${item.cartId}', ${item.qty + 1}); renderCart();">+</button>
+          </div>
+          <div class="item-total">TK${lineTotal}</div>
+          <button class="btn-remove" onclick="removeItem('${item.cartId}'); renderCart();" title="Remove">×</button>
+        `;
+        itemsEl.appendChild(row);
+      });
+
+      // Update summary
+      document.getElementById("s-subtotal").textContent = "TK" + totals.subtotal;
+      document.getElementById("s-delivery").textContent = totals.delivery === 0 ? "FREE" : "TK" + totals.delivery;
+      document.getElementById("s-packaging").textContent = "TK" + totals.packaging;
+      document.getElementById("s-tax").textContent = "TK" + totals.tax;
+      document.getElementById("s-total").textContent = "TK" + totals.grand;
+
+      if (totals.discount > 0) {
+        document.getElementById("s-discount-row").style.display = "flex";
+        document.getElementById("s-discount").textContent = "-TK" + totals.discount;
+      } else {
+        document.getElementById("s-discount-row").style.display = "none";
+      }
+
+      // Promo badge
+      const promoCode = getPromo();
+      const promoBadge = document.getElementById("promo-badge");
+      if (promoCode && PROMO_CODES[promoCode]) {
+        promoBadge.style.display = "flex";
+        document.getElementById("promo-badge-text").textContent = "✓ " + promoCode + ": " + PROMO_CODES[promoCode].desc;
+      } else {
+        promoBadge.style.display = "none";
+      }
+    }
+
+    function doApplyPromo() {
+      const code = document.getElementById("promo-input").value;
+      const result = applyPromo(code);
+      if (!result.ok) {
+        showToast(result.msg, "error");
+      } else {
+        renderCart();
+      }
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>
