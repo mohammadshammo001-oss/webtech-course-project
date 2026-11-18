@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile | Oriental Street</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Oriental Street</h2>
+    <p class="sidebar-label">CUSTOMER PANEL</p>
+
+    <a href="customer-profile.html" class="active">My Profile</a>
+    <a href="order-tracking.html">Track Order</a>
+    <a href="rider-dashboard.html">Rider Dashboard</a>
+    <a href="admin-dashboard.html">Admin Panel</a>
+
+    <div class="sidebar-bottom">
+        <p>Customer: Rohan</p>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <div class="topbar">
+        <div>
+            <h1>My Profile</h1>
+            <p>Manage your personal information and orders</p>
+        </div>
+        <div class="admin-badge">Customer</div>
+    </div>
+
+    <div class="section">
+        <div class="customer-item">
+            <div class="avatar">R</div>
+            <div>
+                <h2>Rohan</h2>
+                <p>Oriental Street Customer</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Full Name:</strong> Rohan</p>
+            <p><strong>Email:</strong> rohan@gmail.com</p>
+            <p><strong>Phone:</strong> 01712345678</p>
+            <p><strong>Address:</strong> Dhanmondi, Dhaka</p>
+        </div>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <p>Total Orders</p>
+            <h2>12</h2>
+            <span>All orders</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Completed Orders</p>
+            <h2>9</h2>
+            <span>Successfully delivered</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Pending Orders</p>
+            <h2>3</h2>
+            <span>Waiting for delivery</span>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Order History</h2>
+            <span>Previous orders</span>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>#OS101</td>
+                        <td>Food</td>
+                        <td>15 Nov 2026</td>
+                        <td>৳ 450</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>
+                            <button onclick="reorder()">Reorder</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS102</td>
+                        <td>Grocery</td>
+                        <td>12 Nov 2026</td>
+                        <td>৳ 850</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>
+                            <button onclick="reorder()">Reorder</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS103</td>
+                        <td>Medicine</td>
+                        <td>10 Nov 2026</td>
+                        <td>৳ 650</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <a href="order-tracking.html" class="view-link">
+                                Track Order
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>© 2026 Oriental Street. All rights reserved.</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

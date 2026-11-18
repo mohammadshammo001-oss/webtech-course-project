@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>OS</h2>
+    <p class="sidebar-label">ADMIN PANEL</p>
+
+    <a href="admin-dashboard.html" class="active">Dashboard</a>
+    <a href="admin-products.html">Products & Riders</a>
+    <a href="rider-dashboard.html">Rider Dashboard</a>
+    <a href="customer-profile.html">Customer Profile</a>
+    <a href="order-tracking.html">Order Tracking</a>
+
+    <div class="sidebar-bottom">
+        <p>Admin: Iftekhar</p>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <div class="topbar">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Welcome back, Iftekhar!</p>
+        </div>
+        <div class="admin-badge">Admin</div>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <p>Total Users</p>
+            <h2>250</h2>
+            <span>Registered customers</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Active Orders</p>
+            <h2>35</h2>
+            <span>Orders in progress</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Revenue</p>
+            <h2>৳ 85,500</h2>
+            <span>Overall sales</span>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Recent Orders</h2>
+            <span>Latest orders</span>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Service</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>#OS101</td>
+                        <td>Rohan</td>
+                        <td>Food</td>
+                        <td>৳ 450</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS102</td>
+                        <td>Rafi</td>
+                        <td>Medicine</td>
+                        <td>৳ 650</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS103</td>
+                        <td>Shammo</td>
+                        <td>Grocery</td>
+                        <td>৳ 850</td>
+                        <td><span class="status processing">Processing</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS104</td>
+                        <td>Mashrur</td>
+                        <td>Fuel</td>
+                        <td>৳ 1,200</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Customer Overview</h2>
+            <a href="customer-profile.html" class="view-link">View Profile</a>
+        </div>
+
+        <div class="customer-list">
+            <div class="customer-item">
+                <div class="avatar">R</div>
+                <div>
+                    <strong>Rohan</strong>
+                    <p>rohan@gmail.com</p>
+                </div>
+                <span class="status delivered">Active</span>
+            </div>
+
+            <div class="customer-item">
+                <div class="avatar">R</div>
+                <div>
+                    <strong>Rafi</strong>
+                    <p>rafi@gmail.com</p>
+                </div>
+                <span class="status delivered">Active</span>
+            </div>
+
+            <div class="customer-item">
+                <div class="avatar">S</div>
+                <div>
+                    <strong>Shammo</strong>
+                    <p>shammo@gmail.com</p>
+                </div>
+                <span class="status delivered">Active</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Oriental Street. All rights reserved.</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

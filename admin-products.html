@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Riders | Oriental Street</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Oriental Street</h2>
+    <p class="sidebar-label">ADMIN PANEL</p>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-products.html" class="active">Products & Riders</a>
+    <a href="rider-dashboard.html">Rider Dashboard</a>
+    <a href="customer-profile.html">Customer Profile</a>
+    <a href="order-tracking.html">Order Tracking</a>
+
+    <div class="sidebar-bottom">
+        <p>Admin: Iftekhar</p>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <div class="topbar">
+        <div>
+            <h1>Products & Rider Approval</h1>
+            <p>Manage products and rider applications</p>
+        </div>
+        <div class="admin-badge">Admin</div>
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Product Management</h2>
+            <span>Available products</span>
+        </div>
+
+        <form id="productForm">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" id="productName"
+                    placeholder="Enter product name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Price (৳)</label>
+                <input type="number" id="productPrice"
+                    placeholder="Enter price" min="1" required>
+            </div>
+
+            <button type="submit">Add Product</button>
+        </form>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productTable">
+                    <tr>
+                        <td>Chicken Burger</td>
+                        <td>Food</td>
+                        <td>৳ 250</td>
+                        <td><span class="status delivered">Available</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Fresh Milk</td>
+                        <td>Grocery</td>
+                        <td>৳ 90</td>
+                        <td><span class="status delivered">Available</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Paracetamol</td>
+                        <td>Medicine</td>
+                        <td>৳ 20</td>
+                        <td><span class="status delivered">Available</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Pending Rider Applications</h2>
+            <span>Review new riders</span>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rider Name</th>
+                        <th>Phone</th>
+                        <th>Vehicle</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="riderTable">
+                    <tr>
+                        <td>Rafi</td>
+                        <td>01710000001</td>
+                        <td>Bike</td>
+                        <td>
+                            <button onclick="approveRider(this)">Approve</button>
+                            <button class="reject-btn"
+                                onclick="rejectRider(this)">Reject</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Shammo</td>
+                        <td>01810000002</td>
+                        <td>Bicycle</td>
+                        <td>
+                            <button onclick="approveRider(this)">Approve</button>
+                            <button class="reject-btn"
+                                onclick="rejectRider(this)">Reject</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mashrur</td>
+                        <td>01910000003</td>
+                        <td>Bike</td>
+                        <td>
+                            <button onclick="approveRider(this)">Approve</button>
+                            <button class="reject-btn"
+                                onclick="rejectRider(this)">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>© 2026 Oriental Street. All rights reserved.</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

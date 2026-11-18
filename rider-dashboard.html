@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Dashboard | Oriental Street</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Oriental Street</h2>
+    <p class="sidebar-label">RIDER PANEL</p>
+
+    <a href="rider-dashboard.html" class="active">Dashboard</a>
+    <a href="order-tracking.html">Order Tracking</a>
+    <a href="customer-profile.html">Customer Profile</a>
+    <a href="admin-dashboard.html">Admin Panel</a>
+
+    <div class="sidebar-bottom">
+        <p>Rider: Rafi</p>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <div class="topbar">
+        <div>
+            <h1>Rider Dashboard</h1>
+            <p>Welcome, Rafi! Ready for delivery?</p>
+        </div>
+        <div class="admin-badge">Online</div>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <p>Total Deliveries</p>
+            <h2>48</h2>
+            <span>Completed orders</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Available Orders</p>
+            <h2 id="availableCount">3</h2>
+            <span>Waiting for riders</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Earnings</p>
+            <h2>৳ 5,500</h2>
+            <span>Your delivery earnings</span>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="section-heading">
+            <h2>Available Delivery Requests</h2>
+            <span>New orders</span>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Address</th>
+                        <th>Delivery Fee</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="orderTable">
+
+                    <tr>
+                        <td>#OS201</td>
+                        <td>Rohan</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td>৳ 60</td>
+                        <td>
+                            <button onclick="acceptDelivery(this)">
+                                Accept Order
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS202</td>
+                        <td>Shammo</td>
+                        <td>Mirpur, Dhaka</td>
+                        <td>৳ 80</td>
+                        <td>
+                            <button onclick="acceptDelivery(this)">
+                                Accept Order
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#OS203</td>
+                        <td>Mashrur</td>
+                        <td>Uttara, Dhaka</td>
+                        <td>৳ 70</td>
+                        <td>
+                            <button onclick="acceptDelivery(this)">
+                                Accept Order
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Rider Information</h2>
+
+        <div class="info-box">
+            <p><strong>Name:</strong> Rafi</p>
+            <p><strong>Vehicle:</strong> Motorcycle</p>
+            <p><strong>Phone:</strong> 01710000001</p>
+            <p><strong>Status:</strong> <span class="status delivered">Active</span></p>
+        </div>
+    </div>
+
+    <footer>© 2026 Oriental Street. All rights reserved.</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
