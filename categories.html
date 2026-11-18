@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | OS Delivery</title>
+
+    <link rel="stylesheet" href="rid_style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            OS DELIVERY
+        </div>
+
+        <ul class="nav-links">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+    <li>
+        <a href="categories.html">Categories</a>
+    </li>
+
+    <li>
+        <a href="food.html">Food</a>
+    </li>
+
+    <li>
+        <a href="grocery.html">Grocery</a>
+    </li>
+
+    <li>
+        <a href="medicine.html">Medicine</a>
+    </li>
+
+    <li>
+        <a href="personal_need.html">Personal Needs</a>
+    </li>
+
+</ul>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>OS Multi-Service Platform</h1>
+
+        <p>
+            Food, Grocery, Medicine and Personal Needs
+            all in one place.
+        </p>
+
+        <input
+            type="text"
+            id="search"
+          placeholder="Search Categories..."
+            onkeyup="searchCategory()">
+
+    </section>
+
+
+    <section class="categories-section">
+
+        <h2>Browse Categories</h2>
+
+        <div class="category-grid">
+
+            <!-- Food -->
+
+            <div class="card">
+
+                <img src="image/food.jpg"
+                     alt="Food Delivery">
+
+                <h3>Food Delivery</h3>
+
+                <p>
+                    Order meals from your favorite restaurants.
+                </p>
+
+                <button onclick="goFood()">
+                    Browse
+                </button>
+
+            </div>
+
+
+            <!-- Grocery -->
+
+            <div class="card">
+
+                <img src="image/grocery.webp"
+                     alt="Grocery">
+
+                <h3>Grocery</h3>
+
+                <p>
+                    Fresh vegetables, meat, oil and daily essentials.
+                </p>
+
+                <button onclick="goGrocery()">
+                    Browse
+                </button>
+
+            </div>
+
+
+            <!-- Medicine -->
+
+            <div class="card">
+
+                <img src="image/medicine.webp"
+                     alt="Medicine">
+
+                <h3>Medicine</h3>
+
+                <p>
+                    Medicines and healthcare products delivered quickly.
+                </p>
+
+                <button onclick="goMedicine()">
+                    Browse
+                </button>
+
+            </div>
+
+
+            <!-- Personal Needs -->
+
+            <div class="card">
+
+                <img src="image/personal.webp"
+                     alt="Personal Needs">
+
+                <h3>Personal Needs</h3>
+
+                <p>
+                    Daily personal care and essential products.
+                </p>
+
+                <button onclick="goPersonal()">
+                    Browse
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 OS Delivery Service
+        </p>
+
+    </footer>
+
+    <script src="rid_script.js"></script>
+
+</body>
+
+</html>

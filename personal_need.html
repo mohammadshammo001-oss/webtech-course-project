@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Needs | OS Delivery</title>
+
+    <link rel="stylesheet" href="rid_style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            OS DELIVERY
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+            <li><a href="personal_need.html">Personal Needs</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Personal Needs Catalog</h1>
+
+        <p>
+            Daily personal products delivered
+            directly to your doorstep.
+        </p>
+
+       <input
+    type="text"
+    id="personalSearch"
+    placeholder="Search Personal Products..."
+    onkeyup="searchPersonal()">
+
+    </section>
+
+
+    <section class="categories-section">
+
+        <h2>Popular Products</h2>
+
+        <div class="category-grid">
+
+            <!-- Cigarette -->
+
+            <div class="card personal-card">
+
+                <img src="image/ban.webp"
+                     alt="Cigarette">
+
+                <h3>Gold Leaf Cigarette</h3>
+
+                <p>
+                    Price: ৳180
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+
+            <!-- Toothbrush -->
+
+            <div class="card personal-card">
+
+                <img src="image/tot.webp"
+                     alt="Toothbrush">
+
+                <h3>Toothbrush</h3>
+
+                <p>
+                    Price: ৳90
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+
+            <!-- Soap -->
+
+            <div class="card personal-card">
+
+                <img src="image/soap.webp"
+                     alt="Soap">
+
+                <h3>Beauty Soap</h3>
+
+                <p>
+                    Price: ৳65
+                </p>
+
+                <button>
+                    See Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div style="margin-top:50px;">
+
+            <h2>
+                Request a Product
+            </h2>
+
+            <p>
+                Couldn't find what you need?
+                Let us know.
+            </p>
+
+            <textarea
+                id="customerRequest"
+                rows="6"
+                cols="60"
+                placeholder="Write what product you need..."></textarea>
+
+            <br><br>
+
+           <button onclick="submitRequest()">
+    Submit Request
+</button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 OS Delivery Service
+        </p>
+
+    </footer>
+
+    <script src="rid_script.js"></script>
+
+</body>
+
+</html>
