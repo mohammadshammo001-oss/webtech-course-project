@@ -1,7 +1,7 @@
 
-// =====================================
-// 1. LOGIN PAGE
-// =====================================
+
+// LOGIN PAGE
+
 
 var selectedRole = "Customer";
 
@@ -59,9 +59,9 @@ if (loginForm != null) {
 }
 
 
-// =====================================
-// 2. CUSTOMER REGISTRATION PAGE
-// =====================================
+
+// CUSTOMER REGISTRATION PAGE
+
 
 var customerForm = document.getElementById("customerForm");
 
@@ -123,9 +123,9 @@ if (customerForm != null) {
 }
 
 
-// =====================================
+
 // 3. CUSTOMER DELIVERY PROFILE PAGE
-// =====================================
+
 
 // Load the customer's saved address when the page opens
 
@@ -221,9 +221,9 @@ if (profileForm != null) {
 }
 
 
-// =====================================
+
 // 4. RIDER REGISTRATION PAGE
-// =====================================
+
 
 var riderForm = document.getElementById("riderForm");
 
