@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery | OS Delivery</title>
+
+    <link rel="stylesheet" href="rid_style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            OS DELIVERY
+        </div>
+
+       <ul class="nav-links">
+ 
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="food.html">Food</a></li>
+<li><a href="grocery.html">Grocery</a></li>
+<li><a href="medicine.html">Medicine</a></li>
+<li><a href="personal_need.html">Personal Needs</a></li>
+ 
+</ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <h1>Grocery Catalog</h1>
+
+        <p>
+            Browse fresh vegetables, fish, meat,
+            oil and daily grocery essentials.
+        </p>
+
+        <input type="text"
+       id="grocerySearch"
+       placeholder="Search Grocery Products..."
+       onkeyup="searchGrocery()">
+        <br><br>
+
+        <select id="groceryFilter">
+
+            <option>
+                All Categories
+            </option>
+
+            <option>
+                Vegetables
+            </option>
+
+            <option>
+                Fish & Meat
+            </option>
+
+            <option>
+                Oil & Spices
+            </option>
+
+        </select>
+
+    </section>
+
+    <section class="categories-section">
+
+        <h2>Vegetables</h2>
+
+        <div class="category-grid">
+
+            <div class="card grocery-card">
+
+                <img src="image/qcam.webp"
+                     alt="Cucumber">
+
+                <h3>Cucumber</h3>
+
+                <p>Price: ৳60 / kg</p>
+
+                <button>See Details</button>
+
+            </div>
+
+<div class="card grocery-card">
+
+                <img src="image/pot.webp"
+                     alt="Potato">
+
+                <h3>Potato</h3>
+
+                <p>Price: ৳50 / kg</p>
+
+                <button>See Details</button>
+
+            </div>
+
+
+            <div class="card grocery-card">
+
+                <img src="image/oni.webp"
+                     alt="Onion">
+
+                <h3>Onion</h3>
+
+                <p>Price: ৳90 / kg</p>
+
+                <button>See Details</button>
+
+            </div>
+
+        </div>
+
+
+        <h2 style="margin-top:40px;">
+            Fish & Meat
+        </h2>
+
+        <div class="category-grid">
+
+            <div class="card grocery-card">
+
+                <img src="image/fm.webp"
+                     alt="Fish Collection">
+
+                <h3>Fresh Fish Collection</h3>
+
+                <p>
+                    Catla, Rui and fresh local fish available.
+                </p>
+
+                <button>See Details</button>
+
+            </div>
+
+
+            <div class="card grocery-card">
+
+                <img src="image/cmeat.webp"
+                     alt="Chicken Meat">
+
+                <h3>Chicken Meat</h3>
+
+                <p>Price: ৳320 / kg</p>
+
+                <button>See Details</button>
+
+            </div>
+
+
+            <div class="card grocery-card">
+
+                <img src="image/bmeat.jpg"
+                     alt="Beef Meat">
+
+                <h3>Beef Meat</h3>
+
+                <p>Price: ৳850 / kg</p>
+
+                <button>See Details</button>
+
+            </div>
+
+        </div>
+
+
+        <h2 style="margin-top:40px;">
+            Oil & Spices
+        </h2>
+
+        <div class="category-grid">
+
+            <div class="card grocery-card">
+
+                <img src="image/oil.webp"
+                     alt="Refined Oil">
+
+                <h3>Refined Oil</h3>
+
+                <p>Price: ৳220 / Litre</p>
+
+                <button>See Details</button>
+
+            </div>
+
+
+            <div class="card grocery-card">
+
+                <img src="image/Mustard.webp"
+                     alt="Mustard Oil">
+
+                <h3>Mustard Oil</h3>
+
+                <p>Price: ৳260 / Litre</p>
+
+                <button>See Details</button>
+
+            </div>
+
+
+           <div class="card grocery-card">
+
+                <img src="image/suno.webp"
+                     alt="Sunflower Oil">
+
+                <h3>Sunflower Oil</h3>
+
+                <p>Price: ৳300 / Litre</p>
+
+                <button>See Details</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 OS Delivery Service
+        </p>
+
+    </footer>
+
+    <script src="rid_script.js"></script>
+
+</body>
+
+</html>
